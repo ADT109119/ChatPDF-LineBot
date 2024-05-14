@@ -12,7 +12,14 @@ RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 COPY . .
 
 # Install Python requirements
-RUN pip install -r requirements.txt
+RUN apt-get update && apt-get upgrade -y && \
+    apt-get install -y nodejs npm &&\
+    cd View &&\
+    npm install -y &&\
+    npm run build &&\
+    cd .. &&\
+    cp .env.example .env &&\
+    pip install -r requirements.txt
 
 # Expose port
 EXPOSE 8000
