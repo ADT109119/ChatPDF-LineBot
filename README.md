@@ -112,6 +112,7 @@ npm run build
 docker run -d \
 --name chatpdf-linebot \
 -p 8000:8000 \
+-v /local/file/store/path:/app/db
 -e LINE_CHANNEL_ACCESS_TOKEN=YOUR_LINE_CHANNEL_ACCESS_TOKEN \
 -e LINE_CHANNEL_SECRET=YOUR_LINE_CHANNEL_SECRET \
 -e LINE_LIFF_ID=YOUR_LINE_LIFF_ID \
