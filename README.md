@@ -75,7 +75,7 @@ npm run build
 
 ### 6. 登入 OpenAI、Groq 平台(或其他平台)
 * 生成一個 OpenAI 的 API key。
-* 也可以生成其他平台的API Key(例如 Groq)，只是必須該平台的 API 必須與 OpenAI 兼容，且要記得在下一步改`BASE_URL`
+* 也可以生成其他平台的API Key(例如 Groq)，只是該平台的 API 必須與 OpenAI 兼容，且要記得在下一步改`BASE_URL`
 
 ### 6. 設定環境變數
 
