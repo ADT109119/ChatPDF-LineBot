@@ -133,7 +133,7 @@ python .\main.py
 
 ### 8. 回到 LINE 設定
 * Line Bot 設定
-  * 進到「My AI Assistant」頻道頁面，點選「Messaging API」頁籤，設置「Webhook URL」，填入應用程式網址並加上「/callback」路徑，例如「https://line.the-walking.fish.com/callback」，點選「Update」按鈕。
+  * 進到「My AI Assistant」頻道頁面，點選「Messaging API」頁籤，設置「Webhook URL」，填入應用程式網址並加上「/callback」路徑，例如 `https://line.the-walking.fish.com/callback`，點選「Update」按鈕。
   * 點選「Verify」按鈕，驗證是否呼叫成功。
   * 將「Use webhook」功能開啟。
   * 將「Auto-reply messages」功能關閉。
