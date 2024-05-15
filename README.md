@@ -77,7 +77,7 @@ npm run build
 * 生成一個 OpenAI 的 API key。
 * 也可以生成其他平台的API Key(例如 Groq)，只是該平台的 API 必須與 OpenAI 兼容，且要記得在下一步改`BASE_URL`
 
-### 6. 設定環境變數
+### 7. 設定環境變數
 
 伺服器或 Docker 可直接設定環境變數
 
@@ -104,7 +104,7 @@ npm run build
 | `ALLOW_FILE_TYPE` | 允許上傳的文件類型,多個類型以`,`分隔 | `pdf,csv,txt` |
 
 
-### 7. 運行伺服器
+### 8. 運行伺服器
 
 #### 使用 Docker
 
@@ -132,7 +132,7 @@ adt109119/chatpdf-linebot
 python .\main.py
 ```
 
-### 8. 回到 LINE 設定
+### 9. 回到 LINE 設定
 * Line Bot 設定
   * 進到「My AI Assistant」頻道頁面，點選「Messaging API」頁籤，設置「Webhook URL」，填入應用程式網址並加上「/callback」路徑，例如 `https://line.the-walking.fish.com/callback`，點選「Update」按鈕。
   * 點選「Verify」按鈕，驗證是否呼叫成功。
