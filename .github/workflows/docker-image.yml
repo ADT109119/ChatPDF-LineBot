@@ -35,4 +35,4 @@ jobs:
           push: true
           tags: |
             ${{ secrets.DOCKERHUB_USERNAME }}/chatpdf-linebot:latest
-            ${{ secrets.DOCKERHUB_USERNAME }}/chatpdf-linebot:${{ date }}
+            ${{ secrets.DOCKERHUB_USERNAME }}/chatpdf-linebot:${{ steps.date.outputs.date }}
