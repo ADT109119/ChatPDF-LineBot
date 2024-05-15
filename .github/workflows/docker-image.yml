@@ -10,6 +10,12 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+      - name: Get current time
+        uses: josStorer/get-current-time@v2
+        id: current-time
+        with:
+          format: YYYYMMDD-HH
+          utcOffset: "+08:00"
       -
         name: Checkout
         uses: actions/checkout@v4
@@ -31,4 +37,4 @@ jobs:
           push: true
           tags: |
             ${{ secrets.DOCKERHUB_USERNAME }}/chatpdf-linebot:latest
-            ${{ secrets.DOCKERHUB_USERNAME }}/chatpdf-linebot:${{ steps.date.outputs.date }}
+            ${{ secrets.DOCKERHUB_USERNAME }}/chatpdf-linebot:${{ steps.current-time.outputs.formattedTime }}
