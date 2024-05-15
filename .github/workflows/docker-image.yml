@@ -23,10 +23,6 @@ jobs:
         name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v3
       -
-        name: Get current date
-        id: date
-        run: echo "::set-output name=date::$(date +'%Y-%m-%d-%H-%M')"
-      -
         name: Build and push
         uses: docker/build-push-action@v5
         with:
