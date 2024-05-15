@@ -8,6 +8,9 @@ WORKDIR /app
 ENV TZ=Asia/Taipei
 RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 
+## Set IN_DOCKER environment variable
+ENV IN_DOCKER=1
+
 # Copy files
 COPY . .
 
