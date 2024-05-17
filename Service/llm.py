@@ -41,7 +41,9 @@ def chat_llm(text: str, user_id: str):
 
     retriever = vectordb.as_retriever(
         search_type="similarity_score_threshold",
-        search_kwargs={'score_threshold': KnowledgeBaseSetting["score_threshold"]}
+        search_kwargs={'score_threshold': KnowledgeBaseSetting["score_threshold"],
+                       'k': KnowledgeBaseSetting["search_item_limit"]
+                       }
     )
 
     qa_prompt = ChatPromptTemplate.from_messages(
