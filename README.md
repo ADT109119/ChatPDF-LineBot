@@ -7,6 +7,10 @@
 | ![Screenshot_20240514-132200](https://github.com/ADT109119/ChatPDF-LineBot/assets/106337749/996fea6c-3ae8-4d9a-baff-7ada3860b4f9) | ![Screenshot_20240514-131836](https://github.com/ADT109119/ChatPDF-LineBot/assets/106337749/0cb06999-e8c3-4779-8fe2-c6f87a7a370c) |
 |------|------|
 
+## 說明文件
+
+* [中文](https://adt109119.github.io/ChatPDF-LineBot-Docs/)
+
 ## 功能
 
 目前支援以下幾種功能:
