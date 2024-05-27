@@ -10,7 +10,7 @@
 ## 說明文件
 
 * [中文](https://adt109119.github.io/ChatPDF-LineBot-Docs/)
-* [English](https://adt109119.github.io/ChatPDF-LineBot-Docs/en/)
+* [English](https://adt109119.github.io/ChatPDF-LineBot-Docs/en/) (使用 ChatGPT 翻譯)
 
 ## 功能
 
