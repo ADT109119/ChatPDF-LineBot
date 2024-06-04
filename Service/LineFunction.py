@@ -12,7 +12,7 @@ def replay_info(line_id):
     temp = temp.replace("{$FILE_AMOUNT}", str(uploadedFiles.get_file_amount(line_id)))
     temp = temp.replace("{$FILE_SIZE_LIMIT}", setting.byte_to_kb_or_mb(setting.FILE_MAX_SIZE))
     temp = temp.replace("{$USED_SPACE}", f"{setting.byte_to_kb_or_mb(calc_total_size(line_id))}/{setting.byte_to_kb_or_mb(setting.SPACE_PER_USER)}")
-    temp = temp.replace("{$USED_SPACE_PERCENTAGE}", str(calc_total_size(line_id)/setting.FILE_MAX_SIZE * 100)+"%")
+    temp = temp.replace("{$USED_SPACE_PERCENTAGE}", str(calc_total_size(line_id)/setting.SPACE_PER_USER * 100)+"%")
     temp = temp.replace("{$MAX_CHAT_HISTORY}", str(setting.MAX_CHAT_HISTORY))
     return temp
     

@@ -24,7 +24,7 @@ class Setting:
         self.ALLOW_FILE_TYPE = os.getenv("ALLOW_FILE_TYPE", "pdf,csv,txt").split(",")
 
         self.MAX_CHAT_HISTORY = int(os.getenv("MAX_CHAT_HISTORY", "5"))
-        self.VERSION = os.getenv("VERSION", "1.0")
+        self.VERSION = os.getenv("VERSION", "1.3")
 
 
     def space_conversion(self, space):
