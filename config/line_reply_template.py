@@ -6,11 +6,7 @@ HELP_TEMPLATE="""
     "url": "https://opengraph.githubassets.com/{$TIME}/ADT109119/ChatPDF-LineBot",
     "size": "full",
     "aspectRatio": "20:13",
-    "aspectMode": "cover",
-    "action": {
-      "type": "uri",
-      "uri": "https://line.me/"
-    }
+    "aspectMode": "cover"
   },
   "body": {
     "type": "box",
