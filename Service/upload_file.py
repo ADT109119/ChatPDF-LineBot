@@ -38,11 +38,11 @@ def upload_file(line_id, file: UploadFile):
                     raise Exception("file size too large")
                 
                 # 檢查空間是否足夠
-                total_size = 0
-                file_list = uploadedFiles.get_all_files_list(line_id)
-                for f in file_list:
-                    total_size += os.stat(f[3]).st_size
-                print(total_size)
+                total_size = calc_total_size(line_id)
+                # file_list = uploadedFiles.get_all_files_list(line_id)
+                # for f in file_list:
+                #     total_size += os.stat(f[3]).st_size
+                # print(total_size)
                 if total_size+len(content) > setting.SPACE_PER_USER:
                     raise Exception("space limit reached")
 
@@ -75,3 +75,11 @@ def delete_file(file_id, line_id):
     except Exception as e:
         print(e)
         raise HTTPException(status_code=400, detail="error")
+
+def calc_total_size(line_id):
+    total_size = 0
+    file_list = uploadedFiles.get_all_files_list(line_id)
+    for f in file_list:
+        total_size += os.stat(f[3]).st_size
+
+    return total_size

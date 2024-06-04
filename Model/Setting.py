@@ -24,6 +24,7 @@ class Setting:
         self.ALLOW_FILE_TYPE = os.getenv("ALLOW_FILE_TYPE", "pdf,csv,txt").split(",")
 
         self.MAX_CHAT_HISTORY = int(os.getenv("MAX_CHAT_HISTORY", "5"))
+        self.VERSION = os.getenv("VERSION", "1.0")
 
 
     def space_conversion(self, space):
@@ -47,5 +48,11 @@ class Setting:
         
         return 0
     
+    def byte_to_kb_or_mb(self, byte):
+        i = 0
+        units = ['B', 'KB', 'MB', 'GB', 'TB']
+        for i, unit in enumerate(units):
+            if byte < 1024 ** (i + 1) or i == len(units) - 1:
+                return f"{byte / (1024 ** i):.1f} {unit}"
 
 setting = Setting()

@@ -16,6 +16,9 @@ class UploadedFiles(BaseModel):
 
     def get_file(self, id, line_id):
         return self.sql_query('SELECT file_name, file_path FROM uploaded_files WHERE id =? AND line_id =?', (id, line_id, ))
+    
+    def get_file_amount(self, line_id):
+        return self.sql_query('SELECT COUNT(id) FROM uploaded_files WHERE line_id =?', (line_id, ))[0][0]
 
     def get_all_files_list(self, line_id):
         return self.sql_query('SELECT * FROM uploaded_files WHERE line_id = ?', (line_id, ))
