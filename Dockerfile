@@ -31,7 +31,7 @@ COPY --from=build /app/View/dist /app/View/dist
 # Install Python requirements
 RUN ls && \
     cp .env.example .env && \
-    pip install --no-cache-dir -r reurements.txt
+    pip install --no-cache-dir -r requirements.txt
 
 # Expose port
 EXPOSE 8000
