@@ -1,5 +1,5 @@
 # 使用 Node.js 來構建 Vue.js 網頁
-FROM node:16 AS build
+FROM node:20 AS build
 
 # 設置工作目錄
 WORKDIR /app
