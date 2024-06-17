@@ -29,7 +29,8 @@ COPY . .
 COPY --from=build /app/View/dist /app/View/dist
 
 # Install Python requirements
-RUN cp .env.example .env && \
+RUN ls && \
+    cp .env.example .env && \
     pip install --no-cache-dir -r reurements.txt
 
 # Expose port
