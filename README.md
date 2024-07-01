@@ -32,6 +32,18 @@
 - **Vue.js**: 用於構建用戶介面
 - **Line Bot SDK**: 用於與 Line 平台集成
 
+## Hugging Face 一鍵部署
+
+本專案可以快速部署在 Hugging Face 上
+
+支援 CloudFlare Tunnel 自訂網址
+
+但要注意若無購買 Hugging Face 的永久儲存空間
+
+每次更新或更改資料時檔案都匯遺失
+
+[![](https://huggingface.co/datasets/huggingface/badges/resolve/main/deploy-on-spaces-lg-dark.svg)](https://huggingface.co/spaces/ADT109119/ChatPDF-LineBot?duplicate=true)
+
 ## 安裝
 > 使用 Docker 的人可直接跳至第 5 步
 
