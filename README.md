@@ -40,7 +40,7 @@
 
 但要注意若無購買 Hugging Face 的永久儲存空間
 
-每次更新或更改資料時檔案都匯遺失
+每次更新或更改資料時檔案都會遺失
 
 [![](https://huggingface.co/datasets/huggingface/badges/resolve/main/deploy-on-spaces-lg-dark.svg)](https://huggingface.co/spaces/ADT109119/ChatPDF-LineBot?duplicate=true)
 
