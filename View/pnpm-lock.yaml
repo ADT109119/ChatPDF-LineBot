@@ -6,63 +6,63 @@ settings:
 
 dependencies:
   '@line/liff':
-    specifier: ^2.23.2
+    specifier: ^2.27.3
     version: 2.27.3
   body-parser:
-    specifier: ^1.20.3
+    specifier: ^1.20.4
     version: 1.20.4
   core-js:
-    specifier: ^3.8.3
+    specifier: ^3.36.0
     version: 3.36.0
   sweetalert2:
-    specifier: ^11.10.8
+    specifier: ^11.26.24
     version: 11.26.24
   vue:
-    specifier: ^3.2.13
+    specifier: ^3.4.21
     version: 3.4.21
   vue-router:
-    specifier: ^4.0.3
+    specifier: ^4.3.0
     version: 4.3.0(vue@3.4.21)
   vuex:
-    specifier: ^4.0.0
+    specifier: ^4.1.0
     version: 4.1.0(vue@3.4.21)
 
 devDependencies:
   '@babel/core':
-    specifier: ^7.12.16
+    specifier: ^7.24.0
     version: 7.24.0
   '@babel/eslint-parser':
-    specifier: ^7.12.16
+    specifier: ^7.23.10
     version: 7.23.10(@babel/core@7.24.0)(eslint@7.32.0)
   '@vue/cli-plugin-babel':
-    specifier: ~5.0.0
+    specifier: ~5.0.8
     version: 5.0.8(@vue/cli-service@5.0.8)(core-js@3.36.0)(vue@3.4.21)
   '@vue/cli-plugin-eslint':
-    specifier: ~5.0.0
+    specifier: ~5.0.8
     version: 5.0.8(@vue/cli-service@5.0.8)(eslint@7.32.0)
   '@vue/cli-plugin-router':
-    specifier: ~5.0.0
+    specifier: ~5.0.8
     version: 5.0.8(@vue/cli-service@5.0.8)
   '@vue/cli-plugin-vuex':
-    specifier: ~5.0.0
+    specifier: ~5.0.8
     version: 5.0.8(@vue/cli-service@5.0.8)
   '@vue/cli-service':
-    specifier: ~5.0.0
+    specifier: ~5.0.8
     version: 5.0.8(vue@3.4.21)
   autoprefixer:
-    specifier: ^10.4.19
+    specifier: ^10.4.27
     version: 10.4.27(postcss@8.5.8)
   eslint:
     specifier: ^7.32.0
     version: 7.32.0
   eslint-plugin-vue:
-    specifier: ^8.0.3
+    specifier: ^8.7.1
     version: 8.7.1(eslint@7.32.0)
   postcss:
-    specifier: ^8.4.38
+    specifier: ^8.5.8
     version: 8.5.8
   tailwindcss:
-    specifier: ^3.4.3
+    specifier: ^3.4.19
     version: 3.4.19
 
 packages:
@@ -1783,6 +1783,7 @@ packages:
       tslib: 2.6.2
     transitivePeerDependencies:
       - debug
+      - supports-color
     dev: false
 
   /@liff/logger@2.27.3(tslib@2.6.2):
@@ -1938,6 +1939,7 @@ packages:
       tslib: 2.6.2
     transitivePeerDependencies:
       - debug
+      - supports-color
     dev: false
 
   /@liff/server-api@2.27.3(tslib@2.6.2):
@@ -1975,6 +1977,7 @@ packages:
       tslib: 2.6.2
     transitivePeerDependencies:
       - debug
+      - supports-color
     dev: false
 
   /@liff/store@2.27.3(tslib@2.6.2):
@@ -2051,9 +2054,10 @@ packages:
     dependencies:
       '@types/node': 24.12.0
     optionalDependencies:
-      axios: 1.13.6
+      axios: 1.16.1
     transitivePeerDependencies:
       - debug
+      - supports-color
     dev: false
 
   /@line/liff@2.27.3:
@@ -2101,6 +2105,7 @@ packages:
       whatwg-fetch: 3.6.20
     transitivePeerDependencies:
       - debug
+      - supports-color
     dev: false
 
   /@nicolo-ribaudo/eslint-scope-5-internals@5.1.1-v1:
@@ -3066,6 +3071,17 @@ packages:
     engines: {node: '>= 10.0.0'}
     dev: true
 
+  /agent-base@6.0.2:
+    resolution: {integrity: sha512-RZNwNclF7+MS/8bDg70amg32dyeZGZxiDuQmZxKLAlQjr3jGyLx+4Kkk58UO7D2QdgFIQCovuSuZESne6RG6XQ==}
+    engines: {node: '>= 6.0.0'}
+    requiresBuild: true
+    dependencies:
+      debug: 4.4.3
+    transitivePeerDependencies:
+      - supports-color
+    dev: false
+    optional: true
+
   /ajv-formats@2.1.1(ajv@8.12.0):
     resolution: {integrity: sha512-Wx0Kx52hxE7C18hkMEggYlEifqWZtYaRgouJor+WMdPnQyEK13vgEWyVNup7SoeeoLMsr4kf5h6dOW11I15MUA==}
     peerDependencies:
@@ -3224,15 +3240,17 @@ packages:
       postcss-value-parser: 4.2.0
     dev: true
 
-  /axios@1.13.6:
-    resolution: {integrity: sha512-ChTCHMouEe2kn713WHbQGcuYrr6fXTBiu460OTwWrWob16g1bXn4vtz07Ope7ewMozJAnEquLk5lWQWtBig9DQ==}
+  /axios@1.16.1:
+    resolution: {integrity: sha512-caYkukvroVPO8KrzuJEb50Hm07KwfBZPEC3VeFHTsqWHvKTsy54hjJz9BS/cdaypROE2rH6xvm9mHX4fgWkr3A==}
     requiresBuild: true
     dependencies:
-      follow-redirects: 1.15.11
+      follow-redirects: 1.16.0
       form-data: 4.0.5
-      proxy-from-env: 1.1.0
+      https-proxy-agent: 5.0.1
+      proxy-from-env: 2.1.0
     transitivePeerDependencies:
       - debug
+      - supports-color
     dev: false
     optional: true
 
@@ -4190,6 +4208,20 @@ packages:
       ms: 2.1.2
     dev: true
 
+  /debug@4.4.3:
+    resolution: {integrity: sha512-RGwwWnwQvkVfavKVt22FGLw+xYSdzARwm0ru6DhTVA3umU5hZc28V3kO4stgYryrTlLpuvgI9GiijltAjNbcqA==}
+    engines: {node: '>=6.0'}
+    requiresBuild: true
+    peerDependencies:
+      supports-color: '*'
+    peerDependenciesMeta:
+      supports-color:
+        optional: true
+    dependencies:
+      ms: 2.1.3
+    dev: false
+    optional: true
+
   /deep-is@0.1.4:
     resolution: {integrity: sha512-oIPzksmTg4/MriiaYGO+okXDT7ztn/w3Eptv/+gSIdMdKsJo0u4CfYNFJPy+4SKMuCqGw2wxnA+URMg3t8a/bQ==}
     dev: true
@@ -4896,18 +4928,6 @@ packages:
     resolution: {integrity: sha512-X8cqMLLie7KsNUDSdzeN8FYK9rEt4Dt67OsG/DNGnYTSDBG4uFAJFBnUeiV+zCVAvwFy56IjM9sH51jVaEhNxw==}
     dev: true
 
-  /follow-redirects@1.15.11:
-    resolution: {integrity: sha512-deG2P0JfjrTxl50XGCDyfI97ZGVCxIpfKYmfyrQ54n5FO/0gfIES8C/Psl6kWVDolizcaaxZJnTS0QSMxvnsBQ==}
-    engines: {node: '>=4.0'}
-    requiresBuild: true
-    peerDependencies:
-      debug: '*'
-    peerDependenciesMeta:
-      debug:
-        optional: true
-    dev: false
-    optional: true
-
   /follow-redirects@1.15.5(debug@4.3.4):
     resolution: {integrity: sha512-vSFWUON1B+yAw1VN4xMfxgn5fTUiaOzAJCKBwIIgT/+7CuGy9+r+5gITvP62j3RmaD5Ph65UaERdOSRGUzZtgw==}
     engines: {node: '>=4.0'}
@@ -4919,6 +4939,18 @@ packages:
     dependencies:
       debug: 4.3.4
     dev: true
+
+  /follow-redirects@1.16.0:
+    resolution: {integrity: sha512-y5rN/uOsadFT/JfYwhxRS5R7Qce+g3zG97+JrtFZlC9klX/W5hD7iiLzScI4nZqUS7DNUdhPgw4xI8W2LuXlUw==}
+    engines: {node: '>=4.0'}
+    requiresBuild: true
+    peerDependencies:
+      debug: '*'
+    peerDependenciesMeta:
+      debug:
+        optional: true
+    dev: false
+    optional: true
 
   /form-data@4.0.5:
     resolution: {integrity: sha512-8RipRLol37bNs2bhoV67fiTEvdTrbMUYcFTiy3+wuuOnUog2QBHCZWXDRijWQfAkhBj2Uf5UnVaiWwA5vdd82w==}
@@ -5334,6 +5366,18 @@ packages:
     transitivePeerDependencies:
       - debug
     dev: true
+
+  /https-proxy-agent@5.0.1:
+    resolution: {integrity: sha512-dFcAjpTQFgoLMzC2VwU+C/CbS7uRL0lWmxDITmqm7C+7F0Odmj6s9l6alZc6AELXhrnggM2CeWSXHGOdX2YtwA==}
+    engines: {node: '>= 6'}
+    requiresBuild: true
+    dependencies:
+      agent-base: 6.0.2
+      debug: 4.4.3
+    transitivePeerDependencies:
+      - supports-color
+    dev: false
+    optional: true
 
   /human-signals@2.1.0:
     resolution: {integrity: sha512-B4FFZ6q/T2jhhksgkbEW3HBvWIfDW85snkQgawt07S7J5QXTk6BkNV+0yAeZrM5QpMAdYlocGoljn0sJ/WQkFw==}
@@ -5952,7 +5996,6 @@ packages:
 
   /ms@2.1.3:
     resolution: {integrity: sha512-6FlzubTLZG3J2a/NVCAleEhjzq5oxgHyaCU9yYXvcLsvoVaHJq/s5xXI6/XXP6tz7R9xAOtHnSO/tXtF3WRTlA==}
-    dev: true
 
   /multicast-dns@7.2.5:
     resolution: {integrity: sha512-2eznPJP8z2BFLX50tf0LuODrpINqP1RVIm/CObbTcBRITQgmC/TjcREF1NeTBzIcR5XO/ukWo+YHOjBbFwIupg==}
@@ -6819,8 +6862,9 @@ packages:
       ipaddr.js: 1.9.1
     dev: true
 
-  /proxy-from-env@1.1.0:
-    resolution: {integrity: sha512-D+zkORCbA9f1tdWRK0RaCR3GPv50cMxcrz4X8k5LTSUD1Dkw47mKJEZQNunItRTkWwgtaUSo1RVFRIG9ZXiFYg==}
+  /proxy-from-env@2.1.0:
+    resolution: {integrity: sha512-cJ+oHTW1VAEa8cJslgmUZrc+sjRKgAKl3Zyse6+PV38hZe/V6Z14TbCuXcan9F9ghlz4QrFr2c92TNF82UkYHA==}
+    engines: {node: '>=10'}
     requiresBuild: true
     dev: false
     optional: true
